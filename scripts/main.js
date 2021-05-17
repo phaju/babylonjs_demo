@@ -21,7 +21,7 @@ const createScene = function () {
 const createGround = function () {
     const groundMAt = new BABYLON.StandardMaterial("groundMat");
     groundMAt.diffuseColor = new BABYLON.Color3(0.180, 0.204, 0.251);
-    const ground = BABYLON.MeshBuilder.CreateGround("ground", {width: 5, height: 5});
+    const ground = BABYLON.MeshBuilder.CreateGround("ground", {width: 8, height: 8});
     ground.material = groundMAt;
 }
 
@@ -38,7 +38,7 @@ const createTablet = function() {
     faceUV[5] = new BABYLON.Vector4(0.4837, 0, 0.5, 1);
     
     const tab = BABYLON.MeshBuilder.CreateBox("box", { width: 3.4, height: 5, depth: 0.168, faceUV: faceUV, wrap: true});
-    tab.position.y = 2;
+    tab.position.y = 3;
     tab.rotation.x = BABYLON.Tools.ToRadians(10);
     tab.material = tabMat;
 
